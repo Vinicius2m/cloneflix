@@ -23,7 +23,7 @@ export const Api = {
             {
                 slug: "originals",
                 title: "Originais do Netflix",
-                items: await basicGet(`/discover/tv?with_network=213&language=pt-BR&api_key=${apiKey}`)
+                items: await basicGet(`/discover/movie?&language=pt-BR&api_key=${apiKey}&without_companies=420|34|33|5|3475|2|109755`)
             },
             {
                 slug: "trending",
@@ -33,7 +33,7 @@ export const Api = {
             {
                 slug: "toprated",
                 title: "Em Alta",
-                items: await basicGet(`/movie/top_rated?language=pt-BR&api_key=${apiKey}`)
+                items: await basicGet(`/movie/top_rated?api_key=${apiKey}&language=pt-BR`)
             },
             {
                 slug: "action",

@@ -1,13 +1,13 @@
-import './style.css'
+import { MovieRowDiv } from "./style"
 
 const MovieRow = ({ topic: { slug, title, items } }) => {
     return (
-        <div>
+        <MovieRowDiv>
             <h2>{title}</h2>
-            <div className='listArea' >
-                <div className='list' >
+            <div className='movieRow__listArea' >
+                <div className='movieRow__list' >
                     {items.results.length > 0 && items.results.map((movie, key) => (
-                        <div className='item' key={key}>
+                        <div className='movieRow__item' key={key}>
 
                             <img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.original_name} />
                         </div>
@@ -15,7 +15,7 @@ const MovieRow = ({ topic: { slug, title, items } }) => {
                     ))}
                 </div>
             </div>
-        </div>
+        </MovieRowDiv>
     )
 }
 

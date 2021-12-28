@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import './App.css';
 import { Api } from './services/api';
 import MovieRow from './components/MovieRow'
 import GlobalStyle from './styles/GlobalStyle';
@@ -21,7 +20,7 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
-      <div className="App">
+      <div>
         <main>
           <section>
             {movieList.map((item, key) => (
