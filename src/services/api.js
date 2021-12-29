@@ -23,7 +23,7 @@ export const Api = {
             {
                 slug: "originals",
                 title: "Originais do Netflix",
-                items: await basicGet(`/discover/movie?&language=pt-BR&api_key=${apiKey}&without_companies=420|34|33|5|3475|2|109755`)
+                items: await basicGet(`/discover/tv?&language=pt-BR&api_key=${apiKey}&without_companies=420|34|33|5|3475|2|109755`)
             },
             {
                 slug: "trending",
@@ -61,5 +61,23 @@ export const Api = {
                 items: await basicGet(`/discover/movie?with_genres=99&language=pt-BR&api_key=${apiKey}`)
             }
         ]
+    },
+    getMovieInfo: async (movieId, type) => {
+        let info = {}
+
+        if (movieId) {
+            switch (type) {
+                case "movie":
+                    info = await basicGet(`/movie/${movieId}?api_key=${apiKey}&language=pt-BR`)
+                    break
+                case "tv":
+                    info = await basicGet(`/tv/${movieId}?api_key=${apiKey}&language=pt-BR  `)
+                    break
+                default:
+                    console.log("getMovieInfo error")
+            }
+        }
+
+        return info
     }
 }
