@@ -5,8 +5,7 @@ import GlobalStyle from './styles/GlobalStyle';
 import FeaturedMovie from './components/FeaturedMovie';
 import { AppStyle } from './AppStyle';
 import Header from './components/Header';
-import { FaGithubSquare } from 'react-icons/fa'
-import { FaLinkedin } from 'react-icons/fa'
+import { FaGithubSquare, FaLinkedin } from 'react-icons/fa'
 
 const App = () => {
 
