@@ -76,5 +76,25 @@ background-size: cover;
                 color: #999;
             }
 
+@media screen and (max-width: 768px) {
+    .featured__name {
+        font-size: 40px;
+
+    }
+    .featured__info {
+        font-size: 16px;
+    }
+    .featured__description {
+        font-size: 14px;
+        max-width: 100%;
+        margin-right: 30px;
+    }
+    .featured__buttons__watch, .featured__buttons__mylist {
+        font-size: 16px;
+    }
+    .featured__genres {
+        font-size: 14px;
+    }
+}
 
 `

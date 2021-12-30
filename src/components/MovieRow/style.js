@@ -61,5 +61,10 @@ margin-bottom: 30px;
         }
 }
 
+@media screen and (max-width: 1023px) {
+    .movieRow__left, .movieRow__right {
+        opacity: 1;
+    }
+}
 
 `

@@ -7,6 +7,10 @@ const FeaturedMovie = ({ item }) => {
 
     const genres = item.genres.map(item => item.name)
 
+    let description = item.overview ? item.overview : "empty description"
+    if (description.length > 200) {
+        description = description.substring(0, 201) + "..."
+    }
     return (
         <Featured backgroundUrl={`https://image.tmdb.org/t/p/original${item.backdrop_path}`} >
             <div className="featured__transparencyY" >
@@ -18,7 +22,7 @@ const FeaturedMovie = ({ item }) => {
                         <div className="featured__info__seasons">{item.number_of_seasons} temporada{item.number_of_seasons > 1 ? "s" : ""}</div>
                     </div>
 
-                    <div className="featured__description" >{item.overview ? item.overview : "empty description"}</div>
+                    <div className="featured__description" >{description}</div>
                     <div className="featured__buttons" >
                         <button className="featured__buttons__watch" >► Assistir</button>
                         <button className="featured__buttons__mylist" >+ Minha Lista</button>

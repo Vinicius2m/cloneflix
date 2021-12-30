@@ -24,4 +24,21 @@ export const AppStyle = styled.main`
             }
         }
     }
+
+    .loading {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background-color: #000;
+        display: grid;
+        place-items: center;
+        width: 100%;
+
+            img {
+                width: 35%; 
+            }
+    }
 `
