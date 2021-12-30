@@ -1,7 +1,6 @@
 import { Featured } from "./style"
 
 const FeaturedMovie = ({ item }) => {
-    console.log(item)
 
     const firstDate = new Date(item.first_air_date)
 
