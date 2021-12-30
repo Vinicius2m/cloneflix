@@ -4,11 +4,13 @@ import MovieRow from './components/MovieRow'
 import GlobalStyle from './styles/GlobalStyle';
 import FeaturedMovie from './components/FeaturedMovie';
 import { AppStyle } from './AppStyle';
+import Header from './components/Header';
 
 const App = () => {
 
   const [movieList, setMovieList] = useState([])
   const [featureData, setFeatureData] = useState(null)
+  const [blackHeader, setBlackHeader] = useState(false)
 
   useEffect(() => {
     const loadAll = async () => {
@@ -25,11 +27,29 @@ const App = () => {
     loadAll()
   }, [])
 
+  useEffect(() => {
+    const scrollListener = () => {
+      if (window.scrollY > 10) {
+        setBlackHeader(true)
+      } else {
+        setBlackHeader(false)
+      }
+    }
+
+
+    window.addEventListener("scroll", scrollListener)
+
+    return () => {
+      window.removeEventListener("scroll", scrollListener)
+    }
+  }, [])
 
   return (
     <>
       <GlobalStyle />
       <AppStyle>
+        <Header black={blackHeader} />
+
         {featureData && <FeaturedMovie item={featureData} />}
 
         <section className='lists' >
