@@ -1,6 +1,6 @@
 import { MovieRowDiv } from "./style"
 import { MdOutlineNavigateBefore, MdOutlineNavigateNext } from 'react-icons/md'
-import { useState } from "react/cjs/react.development"
+import { useState } from "react"
 
 const MovieRow = ({ topic: { slug, title, items } }) => {
 
