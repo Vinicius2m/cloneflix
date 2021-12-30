@@ -5,6 +5,8 @@ import GlobalStyle from './styles/GlobalStyle';
 import FeaturedMovie from './components/FeaturedMovie';
 import { AppStyle } from './AppStyle';
 import Header from './components/Header';
+import { FaGithubSquare } from 'react-icons/fa'
+import { FaLinkedin } from 'react-icons/fa'
 
 const App = () => {
 
@@ -57,6 +59,22 @@ const App = () => {
             <MovieRow topic={item} key={key} />
           ))}
         </section>
+
+        <footer>
+          Feito com base na aula a seguir:&nbsp;
+          <a href='https://www.youtube.com/watch?v=tBweoUiMsDg'>
+            YouTube
+          </a><br />
+          Dados pegues do site <a href='https://Themoviedb.org'>Themoviedb.org</a><br />
+          Direitos de imagem para Netflix<br />
+          <div style={{ margin: "10px 0 10px 0" }}></div>
+          Vinícius de Freitas
+          <div style={{ margin: "10px 0 10px 0" }}></div>
+          <span className='footer__social' >
+            <a href='https://www.linkedin.com/in/vinicius-de-freitas/' ><FaGithubSquare /></a>
+            <a href='https://github.com/Vinicius2m' ><FaLinkedin /></a>
+          </span>
+        </footer>
       </AppStyle>
     </>
   );

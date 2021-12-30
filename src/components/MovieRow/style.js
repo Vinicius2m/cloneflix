@@ -19,10 +19,11 @@ h2 {
 .movieRow__item {
     display: inline-block;
     width: 150px;
-    
+    height: 229px;    
     
     img {
         width: 100%;
+        height: 100%;
         transform: scale(0.9);
         transition: all ease 0.25s;
         cursor: pointer;
